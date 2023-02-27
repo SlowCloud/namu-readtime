@@ -1,23 +1,13 @@
 {
-    "manifest_version": 3,
-    "name": "Namu Read Time",
-    "version": "0.1",
-    "description": "나무위키 항목을 읽는 데 걸리는 예상 시간을 반환합니다.",
-    "content_scripts": [
-        {
-            "js": [
-                "scripts/badge.js",
-                "scripts/content.js"
-            ],
-            "matches": [
-                "https://namu.wiki/*"
-            ]
-        }
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions": [
-        "tabs"
-    ]
+  "manifest_version": 3,
+  "name": "Namu Read Time",
+  "version": "0.1",
+  "description": "나무위키 항목을 읽는 데 걸리는 예상 시간을 반환합니다.",
+  "content_scripts": [
+    {
+      "js": ["scripts/badge.js", "scripts/content.js"],
+      "matches": ["https://namu.wiki/*"]
+    }
+  ],
+  "permissions": ["tabs"]
 }

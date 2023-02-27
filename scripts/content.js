@@ -1,14 +1,15 @@
-
-function messageReceiver(request, sender, sendResponse) {
-    if(request.url) {
-        if(request.url.includes("https://namu.wiki/w/")) {
-            removeBadge()
-            buildBadge()
-        }
-        else {
-            removeBadge()
-        }
-    }
+function onMutation() {
+  if (window.location.href.includes("https://namu.wiki/w/")) {
+    removeBadge();
+    buildBadge();
+  } else {
+    removeBadge();
+  }
 }
 
-chrome.runtime.onMessage.addListener(messageReceiver);
+const observer = new MutationObserver(onMutation);
+observer.observe(document.getElementById("app"), {
+  childList: true,
+});
+
+onMutation();
