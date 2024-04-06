@@ -1,3 +1,4 @@
+
 function onMutation() {
   if (window.location.href.includes("https://namu.wiki/w/")) {
     removeBadge();

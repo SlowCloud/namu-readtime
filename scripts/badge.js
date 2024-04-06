@@ -5,7 +5,7 @@ function removeBadge() {
 
 function buildBadge() {
   badge = document.createElement("p");
-  const article = document.getElementsByClassName("rnvX2WIO")[0];
+  const article = document.getElementsByClassName("zvjCr8BA")[0];
   console.log(article);
 
   const text = article.textContent;
