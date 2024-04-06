@@ -1,10 +1,7 @@
-
 function onMutation() {
+  removeBadge();
   if (window.location.href.includes("https://namu.wiki/w/")) {
-    removeBadge();
     buildBadge();
-  } else {
-    removeBadge();
   }
 }
 
